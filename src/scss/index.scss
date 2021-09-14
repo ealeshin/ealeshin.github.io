@@ -1,0 +1,42 @@
+@import 'modules/normalize';
+@import 'modules/variables';
+@import 'modules/functions';
+
+html, body {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-height: -webkit-fill-available;
+  min-width: 320px;
+  zoom: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-white;
+  font-family: $font-family-sans-serif;
+  font-size: $base-font-size;
+  color: $color-black;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: $big-font-size;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: $color-light-gray;
+}
