@@ -337,6 +337,10 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: "Orpheus Pro";
+  src: url("../fonts/Orpheus_Pro.otf") format("opentype");
+}
 /* fonts */
 /* colors */
 html, body {
@@ -363,6 +367,22 @@ body {
 }
 
 main {
+  height: 100vh;
+  background-image: url("../images/intro-cover.jpg");
+  background-size: cover;
+  background-position: center 65%;
+}
+
+.veil {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.intro-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -372,28 +392,14 @@ main {
 h1 {
   position: relative;
   overflow: hidden;
-  font-size: 28px;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  color: #BEBEBF;
-  background-image: linear-gradient(90deg, #000, #fff, #000);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: animate 3s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  font-family: "Orpheus Pro", serif;
+  font-size: 106px;
+  letter-spacing: -5px;
+  color: white;
 }
 @media (max-width: 700px) {
   h1 {
-    font-size: 18px;
-  }
-}
-
-@keyframes animate {
-  0% {
-    background-position: -500%;
-  }
-  100% {
-    background-position: 500%;
+    font-size: 32px;
+    letter-spacing: -1px;
   }
 }
