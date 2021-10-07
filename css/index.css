@@ -405,6 +405,11 @@ main {
   display: block;
   width: 100vw;
 }
+@media (max-width: 700px) {
+  .nav-container {
+    display: none;
+  }
+}
 
 nav {
   display: flex;
