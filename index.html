@@ -25,5 +25,18 @@
             </div>
         </div>
     </main>
+    <script>
+        const navLinks = document.querySelectorAll('nav > a');
+        navLinks.forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                let el = event.target;
+                el.classList.add('animated');
+                setTimeout(() => {
+                    el.classList.remove('animated');
+                }, 1000);
+            });
+        });
+    </script>
 </body>
 </html>
