@@ -443,11 +443,11 @@ nav a {
   font-size: 12px;
   margin: 0 20px;
   letter-spacing: 2px;
-  opacity: 82%;
+  filter: opacity(82%);
   transition: 0.2s;
 }
 nav a:hover {
-  opacity: 100%;
+  filter: opacity(100%);
 }
 
 h1 {
@@ -466,13 +466,16 @@ h1 {
 
 h2 {
   line-height: 100%;
-  font-size: 24px;
-  opacity: 0;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  filter: opacity(0);
   transition: 1s;
 }
 
 .fade-in {
-  opacity: 100%;
+  filter: opacity(100%);
 }
 
 .mobile-menu-icon {
