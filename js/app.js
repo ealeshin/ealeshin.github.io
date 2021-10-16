@@ -9,14 +9,14 @@ const route = (page) => {
 };
 
 menuIcon.addEventListener('click', () => {
-    let menuClosed = menuIcon.classList.contains('closed');
-    if (!menuClosed) {
-        menuIcon.classList.add('closed');
+    let menuOpened = menuIcon.classList.contains('opened');
+    mainContent.style.display = menuOpened ? 'flex' : 'none';
+    mobileMenu.style.display = menuOpened ? 'none' : 'flex';
+    if (!menuOpened) {
+        menuIcon.classList.add('opened');
     } else {
-        menuIcon.classList.remove('closed');
+        menuIcon.classList.remove('opened');
     }
-    mainContent.style.display = menuClosed ? 'none' : 'flex';
-    mobileMenu.style.display = menuClosed ? 'flex' : 'none';
 });
 
 const nav = document.querySelectorAll('nav > a');
