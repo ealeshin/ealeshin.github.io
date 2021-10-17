@@ -486,20 +486,8 @@ h1 {
   }
 }
 
-.notification {
-  line-height: 100%;
-  font-size: 16px;
-  font-weight: normal;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-a.notification {
-  text-decoration: underline;
-}
-
 h2 {
+  font-weight: normal;
   filter: opacity(0);
   transition: 1s;
 }
