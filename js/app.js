@@ -1,6 +1,6 @@
 const menuIcon = document.querySelector('#menuToggle');
 
-const mobileMenu = document.querySelectorAll('.nav-container')[0];
+const mobileNav = document.querySelectorAll('.nav-container')[0];
 const mainContent = document.querySelectorAll('.intro-container')[0];
 
 const nav = document.querySelectorAll('nav > a');
@@ -13,6 +13,16 @@ const hideElements = (...args) => {
             el.style.display = 'none';
         });
     }
+};
+
+const openMobileNav = () => {
+    mobileNav.style.display = 'flex';
+    menuIcon.classList.add('opened');
+};
+
+const closeMobileNav = () => {
+    mobileNav.style.display = 'none';
+    menuIcon.classList.remove('opened');
 };
 
 const themes = {
@@ -40,12 +50,10 @@ const themes = {
 
 menuIcon.addEventListener('click', () => {
     let menuOpened = menuIcon.classList.contains('opened');
-    mainContent.style.display = menuOpened ? 'flex' : 'none';
-    mobileMenu.style.display = menuOpened ? 'none' : 'flex';
-    if (!menuOpened) {
-        menuIcon.classList.add('opened');
+    if (menuOpened) {
+        closeMobileNav();
     } else {
-        menuIcon.classList.remove('opened');
+        openMobileNav();
     }
 });
 
@@ -58,6 +66,7 @@ nav.forEach((link) => {
         });
         clickedLink.classList.add('active');
         hideElements(main, sections);
+        closeMobileNav();
         let activePageName = clickedLink.getAttribute('data-page');
         let activePage = document.querySelector('#' + activePageName);
         if (activePage !== null) {

@@ -408,6 +408,12 @@ main {
 section {
   height: 100vh;
 }
+@media (max-width: 700px) {
+  section {
+    min-height: 100vh;
+    height: auto;
+  }
+}
 section .section-container {
   display: flex;
   align-items: center;
@@ -417,8 +423,21 @@ section .section-container {
   margin: 0 auto;
   padding-top: 72px;
 }
+@media (max-width: 700px) {
+  section .section-container {
+    padding: 16px;
+    flex-direction: column-reverse;
+    max-width: 100%;
+  }
+}
 section .section-container .section-column {
   width: 50%;
+}
+@media (max-width: 700px) {
+  section .section-container .section-column {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 }
 section .section-container .section-column .section-heading {
   display: block;
