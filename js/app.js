@@ -24,6 +24,10 @@ const closeMobileNav = () => {
     menuIcon.classList.remove('opened');
 };
 
+const isMobileNavOpened = () => {
+    return menuIcon.classList.contains('opened');
+};
+
 const themes = {
     about: {
         backgroundColor: '#30414B',
@@ -48,9 +52,8 @@ const themes = {
 };
 
 menuIcon.addEventListener('click', () => {
-    let menuOpened = menuIcon.classList.contains('opened');
     let backgroundBlock = document.querySelector('#' + window.currentPage);
-    if (menuOpened) {
+    if (isMobileNavOpened()) {
         backgroundBlock.classList.remove('blurred');
         closeMobileNav();
     } else {
@@ -68,7 +71,9 @@ nav.forEach((link) => {
         });
         clickedLink.classList.add('active');
         hideElements(main, sections);
-        closeMobileNav();
+        if (isMobileNavOpened()) {
+            closeMobileNav();
+        }
         let activePageName = clickedLink.getAttribute('data-page');
         window.currentPage = activePageName;
         let activePage = document.querySelector('#' + activePageName);
