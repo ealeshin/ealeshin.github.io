@@ -448,6 +448,10 @@ section .section-container .section-column .section-heading {
   font-weight: normal;
 }
 
+.blurred {
+  filter: blur(5px);
+}
+
 .intro-container {
   display: flex;
   align-items: center;
@@ -469,6 +473,7 @@ section .section-container .section-column .section-heading {
     background-color: rgba(0, 0, 0, 0.54);
     height: 100vh;
     justify-content: center;
+    z-index: 10;
   }
 }
 
@@ -555,6 +560,7 @@ h2 span {
   top: 15px;
   right: 15px;
   cursor: pointer;
+  z-index: 11;
 }
 #menuToggle span {
   display: block;

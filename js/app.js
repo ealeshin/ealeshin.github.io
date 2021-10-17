@@ -1,8 +1,7 @@
+window.currentPage = 'home';
+
 const menuIcon = document.querySelector('#menuToggle');
-
 const mobileNav = document.querySelectorAll('.nav-container')[0];
-const mainContent = document.querySelectorAll('.intro-container')[0];
-
 const nav = document.querySelectorAll('nav > a');
 const main = document.querySelectorAll('main');
 const sections = document.querySelectorAll('section');
@@ -50,9 +49,12 @@ const themes = {
 
 menuIcon.addEventListener('click', () => {
     let menuOpened = menuIcon.classList.contains('opened');
+    let backgroundBlock = document.querySelector('#' + window.currentPage);
     if (menuOpened) {
+        backgroundBlock.classList.remove('blurred');
         closeMobileNav();
     } else {
+        backgroundBlock.classList.add('blurred');
         openMobileNav();
     }
 });
@@ -68,8 +70,10 @@ nav.forEach((link) => {
         hideElements(main, sections);
         closeMobileNav();
         let activePageName = clickedLink.getAttribute('data-page');
+        window.currentPage = activePageName;
         let activePage = document.querySelector('#' + activePageName);
         if (activePage !== null) {
+            activePage.classList.remove('blurred');
             activePage.style.display = 'block';
             activePage.style.backgroundColor = themes[activePageName].backgroundColor;
             document.body.style.color = themes[activePageName].textColor;
