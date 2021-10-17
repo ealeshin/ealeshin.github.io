@@ -405,6 +405,33 @@ main {
   background-position: center center;
 }
 
+section {
+  height: 100vh;
+  background-color: #000000;
+  background-size: cover;
+  background-position: center center;
+}
+section .section-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-top: 72px;
+}
+section .section-container .section-column {
+  width: 50%;
+}
+section .section-container .section-column .section-heading {
+  display: block;
+  margin: 50px 0 25px 0;
+  text-align: left;
+  font-family: "Orpheus Pro", serif;
+  font-size: 52px;
+  font-weight: normal;
+}
+
 .intro-container {
   display: flex;
   align-items: center;
@@ -448,6 +475,7 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Poppins SemiBold", sans-serif;
+  padding-bottom: 10px;
 }
 
 nav a {
@@ -459,6 +487,9 @@ nav a {
 }
 nav a:hover {
   filter: opacity(100%);
+}
+nav a.active {
+  border-bottom: 1px solid white;
 }
 @media (max-width: 700px) {
   nav a {
