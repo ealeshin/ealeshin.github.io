@@ -407,9 +407,6 @@ main {
 
 section {
   height: 100vh;
-  background-color: #000000;
-  background-size: cover;
-  background-position: center center;
 }
 section .section-container {
   display: flex;
@@ -471,7 +468,7 @@ nav {
 }
 
 a {
-  color: #FFFFFF;
+  color: inherit;
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Poppins SemiBold", sans-serif;
@@ -489,7 +486,7 @@ nav a:hover {
   filter: opacity(100%);
 }
 nav a.active {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid;
 }
 @media (max-width: 700px) {
   nav a {
