@@ -30,7 +30,7 @@ const isMobileNavOpened = () => {
 
 const themes = {
     about: {
-        backgroundColor: '#30414B',
+        backgroundColor: '#223336',
         textColor: 'white'
     },
     inspired: {
