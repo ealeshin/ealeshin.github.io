@@ -449,15 +449,6 @@ section .section-container .section-column {
     margin-bottom: 50px;
   }
 }
-section .section-container .section-column-spacer {
-  margin: 50px 0 25px 0;
-  font-size: 52px;
-}
-@media (max-width: 700px) {
-  section .section-container .section-column-spacer {
-    display: none;
-  }
-}
 section .section-container .section-column .section-heading {
   display: block;
   margin: 50px 0 25px 0;
@@ -465,6 +456,14 @@ section .section-container .section-column .section-heading {
   font-family: "Orpheus Pro", serif;
   font-size: 52px;
   font-weight: normal;
+}
+section .section-container .section-column .section-heading.wide-only {
+  display: block;
+}
+@media (max-width: 700px) {
+  section .section-container .section-column .section-heading.wide-only {
+    display: none;
+  }
 }
 section .section-container .section-column .section-text {
   font-size: 16px;
