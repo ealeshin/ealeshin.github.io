@@ -563,7 +563,6 @@ h1 {
   font-family: "Orpheus Pro", serif;
   font-weight: normal;
   color: white;
-  animation: blurredFadeIn 2.5s;
 }
 @media (min-width: 374px) {
   h1 {
@@ -576,20 +575,15 @@ h1 {
   }
 }
 
+.intro {
+  animation: blurredFadeIn 2.5s;
+}
+
 h2 {
   font-weight: normal;
-  filter: opacity(0);
-  transition: 1s;
-}
-h2.always-visible {
-  filter: opacity(100%);
 }
 h2 span {
   font-family: "Poppins SemiBold", sans-serif;
-}
-
-.fade-in {
-  filter: opacity(100%);
 }
 
 #menuToggle {
