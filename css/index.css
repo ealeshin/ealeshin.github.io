@@ -413,7 +413,7 @@ main {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
 }
 @media (max-width: 700px) {
   section {
@@ -469,6 +469,9 @@ section .section-container .section-column .section-text {
   font-size: 16px;
   line-height: 28px;
   letter-spacing: 0.32px;
+}
+section .section-container .section-column .section-text video {
+  padding-top: 7px;
 }
 
 .blurred {
