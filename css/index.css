@@ -391,6 +391,7 @@ template {
 .playlist-container {
   width: 100%;
   display: flex;
+  margin-bottom: 75px;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
