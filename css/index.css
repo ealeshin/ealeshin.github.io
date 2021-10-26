@@ -533,7 +533,9 @@ section .section-container .section-column {
     margin-bottom: 15px;
   }
 }
-section .section-container .section-column video {
+section .section-container .section-column img {
+  width: 100%;
+  height: auto;
   padding-top: 7px;
 }
 
