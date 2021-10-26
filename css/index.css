@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -365,14 +366,85 @@ template {
     transform: translate3d(4px, 0, 0);
   }
 }
-@keyframes fadeIn {
+@keyframes blurredFadeIn {
   0% {
     opacity: 0;
+    filter: blur(8px);
+  }
+  10% {
+    opacity: 0;
+    filter: blur(8px);
   }
   100% {
     opacity: 1;
+    filter: none;
   }
 }
+@keyframes floating {
+  0% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.playlist-container {
+  width: 100%;
+  display: flex;
+  margin-bottom: 75px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+@media (max-width: 700px) {
+  .playlist-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.playlist-item {
+  display: block;
+  width: 270px;
+  margin: 20px 0;
+}
+.playlist-item .track-title {
+  line-height: 1;
+  padding: 6px 0;
+  font-size: 21px;
+  letter-spacing: -0.5px;
+}
+@media (max-width: 700px) {
+  .playlist-item .track-title {
+    font-size: 28px;
+  }
+}
+.playlist-item .track-artist {
+  font-family: "Poppins SemiBold", sans-serif;
+  letter-spacing: -0.3px;
+}
+@media (max-width: 700px) {
+  .playlist-item .track-artist {
+    font-size: 21px;
+  }
+}
+.playlist-item img {
+  width: 250px;
+  height: 250px;
+}
+@media (max-width: 700px) {
+  .playlist-item img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 700px) {
+  .playlist-item {
+    width: 100%;
+    margin: 32px 0;
+  }
+}
+
 html, body {
   box-sizing: border-box;
 }
@@ -405,6 +477,70 @@ main {
   background-position: center center;
 }
 
+section {
+  min-height: 100vh;
+}
+@media (max-width: 700px) {
+  section {
+    min-height: 100vh;
+    height: auto;
+  }
+}
+section .section-heading {
+  display: block;
+  margin: 50px 0 25px 0;
+  text-align: left;
+  font-family: "Orpheus Pro", serif;
+  font-size: 52px;
+  font-weight: normal;
+}
+section .section-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+section .section-container:first-child {
+  padding-top: 72px;
+}
+@media (max-width: 700px) {
+  section .section-container:first-child {
+    padding-top: 25px;
+  }
+}
+@media (max-width: 700px) {
+  section .section-container {
+    flex-direction: column;
+    padding: 8px 15px;
+    max-width: 100%;
+  }
+  section .section-container.mob-reverse {
+    flex-direction: column-reverse;
+  }
+}
+section .section-container .section-column {
+  width: 48%;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.32px;
+}
+@media (max-width: 700px) {
+  section .section-container .section-column {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+section .section-container .section-column video {
+  padding-top: 7px;
+}
+
+.blurred {
+  filter: blur(5px);
+}
+
 .intro-container {
   display: flex;
   align-items: center;
@@ -426,6 +562,7 @@ main {
     background-color: rgba(0, 0, 0, 0.54);
     height: 100vh;
     justify-content: center;
+    z-index: 10;
   }
 }
 
@@ -444,13 +581,15 @@ nav {
 }
 
 a {
-  color: #FFFFFF;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: "Poppins SemiBold", sans-serif;
+  color: inherit;
 }
 
 nav a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Poppins SemiBold", sans-serif;
+  padding-bottom: 10px;
   font-size: 12px;
   margin: 0 20px;
   letter-spacing: 2px;
@@ -460,8 +599,24 @@ nav a {
 nav a:hover {
   filter: opacity(100%);
 }
+nav a.active::before {
+  position: absolute;
+  transform: translateX(-50%);
+  border-radius: 100%;
+  content: "•";
+  left: 50%;
+  top: 16px;
+}
+@media (max-width: 700px) {
+  nav a.active::before {
+    font-size: 25px;
+    left: -16px;
+    top: -2px;
+  }
+}
 @media (max-width: 700px) {
   nav a {
+    color: #FFFFFF;
     font-size: 20px;
     margin: 16px 0;
   }
@@ -486,32 +641,19 @@ h1 {
   }
 }
 
-.notification {
-  line-height: 100%;
-  font-size: 16px;
-  font-weight: normal;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+.intro {
+  animation: blurredFadeIn 2.5s;
 }
 
-a.notification {
-  text-decoration: underline;
+.animated {
+  animation: floating 1s;
 }
 
 h2 {
-  filter: opacity(0);
-  transition: 1s;
-}
-h2.always-visible {
-  filter: opacity(100%);
+  font-weight: normal;
 }
 h2 span {
   font-family: "Poppins SemiBold", sans-serif;
-}
-
-.fade-in {
-  filter: opacity(100%);
 }
 
 #menuToggle {
@@ -520,6 +662,7 @@ h2 span {
   top: 15px;
   right: 15px;
   cursor: pointer;
+  z-index: 11;
 }
 #menuToggle span {
   display: block;
