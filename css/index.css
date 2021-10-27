@@ -511,6 +511,9 @@ section .section-container:first-child {
     padding-top: 25px;
   }
 }
+section .section-container:last-child {
+  padding-bottom: 72px;
+}
 @media (max-width: 700px) {
   section .section-container {
     flex-direction: column;
