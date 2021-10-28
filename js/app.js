@@ -1,5 +1,6 @@
 window.currentPage = 'home';
 
+const body = document.querySelector('body');
 const menuIcon = document.querySelector('#menuToggle');
 const mobileNav = document.querySelectorAll('.nav-container')[0];
 const nav = document.querySelectorAll('nav > a');
@@ -54,9 +55,11 @@ const themes = {
 menuIcon.addEventListener('click', () => {
     let backgroundBlock = document.querySelector('#' + window.currentPage);
     if (isMobileNavOpened()) {
+        body.classList.remove('no-scroll');
         backgroundBlock.classList.remove('blurred');
         closeMobileNav();
     } else {
+        body.classList.add('no-scroll');
         backgroundBlock.classList.add('blurred');
         openMobileNav();
     }
@@ -65,6 +68,8 @@ menuIcon.addEventListener('click', () => {
 nav.forEach((link) => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
+        body.classList.remove('no-scroll');
+        window.scrollTo(0, 0);
         let clickedLink = event.target;
         nav.forEach((navLink) => {
             navLink.classList.remove('active');
