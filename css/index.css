@@ -468,6 +468,9 @@ body {
   color: #FFFFFF;
   font-family: "Poppins Light", sans-serif;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 main {
   height: 100vh;
@@ -563,6 +566,7 @@ section .section-container .section-column img {
 }
 @media (max-width: 700px) {
   .nav-container {
+    position: fixed;
     display: none;
     background-color: rgba(0, 0, 0, 0.54);
     height: 100vh;
@@ -663,7 +667,7 @@ h2 span {
 
 #menuToggle {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 15px;
   right: 15px;
   cursor: pointer;
