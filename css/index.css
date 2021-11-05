@@ -380,12 +380,12 @@ template {
     filter: none;
   }
 }
-@keyframes floating {
-  0% {
-    transform: translateY(30%);
+@keyframes titles {
+  from {
+    transform: translateY(100%);
   }
-  100% {
-    transform: translateY(0);
+  to {
+    transform: translateY(-100%);
   }
 }
 .playlist-container {
@@ -428,12 +428,24 @@ template {
     font-size: 21px;
   }
 }
-.playlist-item img {
+.playlist-item .track-link {
+  display: inline-block;
+  font-family: "Poppins SemiBold", sans-serif;
+  margin-top: 8px;
+  padding: 2px 12px;
+  border: 1px solid black;
+  border-radius: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 10px;
+}
+.playlist-item > img {
   width: 250px;
   height: 250px;
 }
 @media (max-width: 700px) {
-  .playlist-item img {
+  .playlist-item > img {
     width: 100%;
     height: auto;
   }
@@ -443,6 +455,29 @@ template {
     width: 100%;
     margin: 32px 0;
   }
+}
+
+.titles-container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titles-feed {
+  position: relative;
+  -webkit-animation: titles 10s linear;
+  -webkit-animation-iteration-count: 1;
+  animation: titles 10s linear;
+  animation-iteration-count: 1;
+  overflow: hidden;
+  display: block;
+}
+.titles-feed .item {
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 html, body {

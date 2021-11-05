@@ -30,6 +30,10 @@ const isMobileNavOpened = () => {
 };
 
 const themes = {
+    home: {
+        backgroundColor: 'black',
+        textColor: 'white'
+    },
     about: {
         backgroundColor: '#223336',
         textColor: 'white'
