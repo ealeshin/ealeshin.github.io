@@ -463,15 +463,15 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .titles-feed {
   position: relative;
-  -webkit-animation: titles 10s linear;
+  -webkit-animation: titles 14s linear;
   -webkit-animation-iteration-count: 1;
   animation: titles 10s linear;
   animation-iteration-count: 1;
-  overflow: hidden;
   display: block;
 }
 .titles-feed .item {
