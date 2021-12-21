@@ -14,6 +14,7 @@ const hideElements = (...args) => {
             el.style.display = 'none';
         });
     }
+    titles.style.display = 'block';
 };
 
 const openMobileNav = () => {
