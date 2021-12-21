@@ -6,6 +6,7 @@ const mobileNav = document.querySelectorAll('.nav-container')[0];
 const nav = document.querySelectorAll('nav > a');
 const main = document.querySelectorAll('main');
 const sections = document.querySelectorAll('section');
+const titles = document.querySelector('.titles-feed');
 
 const hideElements = (...args) => {
     for (let i = 0; i < args.length; i++) {
@@ -55,6 +56,10 @@ const themes = {
         textColor: 'white'
     }
 };
+
+titles.addEventListener('animationend', () => {
+   titles.style.display = 'none';
+});
 
 menuIcon.addEventListener('click', () => {
     let backgroundBlock = document.querySelector('#' + window.currentPage);
