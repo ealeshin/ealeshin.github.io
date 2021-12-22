@@ -382,7 +382,7 @@ template {
 }
 @keyframes titles {
   from {
-    transform: translateY(75%);
+    transform: translateY(65%);
   }
   to {
     transform: translateY(-100%);
@@ -459,11 +459,17 @@ template {
 
 .titles-container {
   width: 100%;
-  height: 80vh;
+  height: 70vh;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+}
+@media (max-width: 700px) {
+  .titles-container {
+    margin-top: 80px;
+  }
 }
 
 .titles-feed {
