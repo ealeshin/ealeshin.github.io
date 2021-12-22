@@ -382,7 +382,7 @@ template {
 }
 @keyframes titles {
   from {
-    transform: translateY(100%);
+    transform: translateY(75%);
   }
   to {
     transform: translateY(-100%);
@@ -468,13 +468,17 @@ template {
 
 .titles-feed {
   position: relative;
-  -webkit-animation: titles 14s linear;
+  -webkit-animation: titles 18s linear;
   -webkit-animation-iteration-count: 1;
-  animation: titles 10s linear;
+  animation: titles 18s linear;
   animation-iteration-count: 1;
   display: block;
 }
 .titles-feed .item {
+  font-family: "Poppins SemiBold", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   display: block;
   text-align: center;
   margin-bottom: 40px;
