@@ -1,13 +1,3 @@
-Build styles
- 
-```sh
-sass --no-source-map src/scss:css
-```
+This repository contains built styles, HTML pages, JavaScript files, fonts and images of my homepage.
 
-Run watcher
- 
-```sh
-sass --watch --no-source-map src/scss:css
-```
-
-And go to [ealeshin.github.io](https://ealeshin.github.io)
+Go to [ealeshin.github.io](https://ealeshin.github.io)
