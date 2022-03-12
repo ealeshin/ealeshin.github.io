@@ -40,11 +40,7 @@ const themes = {
         backgroundColor: '#223336',
         textColor: 'white'
     },
-    inspired: {
-        backgroundColor: 'black',
-        textColor: 'white'
-    },
-    playlist: {
+    events: {
         backgroundColor: '#DFDFDF',
         textColor: 'black'
     },

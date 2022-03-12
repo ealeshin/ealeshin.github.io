@@ -521,7 +521,7 @@ body.no-scroll {
 main {
   height: 100vh;
   background-color: #000000;
-  background-image: url("../images/intro-cover-2.jpg");
+  background-image: url("../images/intro-cover.jpg");
   background-size: cover;
   background-position: center center;
 }
