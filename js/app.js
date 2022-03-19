@@ -40,7 +40,7 @@ const themes = {
         backgroundColor: 'black',
         textColor: 'white'
     },
-    events: {
+    gallery: {
         backgroundColor: '#DFDFDF',
         textColor: 'black'
     },
