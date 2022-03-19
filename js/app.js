@@ -36,8 +36,8 @@ const themes = {
         backgroundColor: 'black',
         textColor: 'white'
     },
-    about: {
-        backgroundColor: '#223336',
+    setlist: {
+        backgroundColor: 'black',
         textColor: 'white'
     },
     events: {
