@@ -400,7 +400,6 @@ template {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  background-color: darkkhaki;
   width: 100%;
   margin: 32px 0;
 }
@@ -411,9 +410,11 @@ template {
 }
 .gallery-item-picture {
   width: 500px;
-  line-height: 1;
   font-size: 21px;
-  letter-spacing: -0.5px;
+}
+.gallery-item-picture img {
+  width: 100%;
+  height: auto;
 }
 @media (max-width: 700px) {
   .gallery-item-picture {
@@ -423,23 +424,31 @@ template {
 }
 .gallery-item-description {
   width: 500px;
-  font-family: "Poppins SemiBold", sans-serif;
-  letter-spacing: -0.3px;
+  font-family: "Poppins Light", sans-serif;
+  font-size: 16px;
 }
 @media (max-width: 700px) {
   .gallery-item-description {
     width: 100%;
-    font-size: 21px;
+    margin-top: 12px;
   }
 }
-.gallery-item > img {
-  width: 250px;
-  height: 250px;
+.gallery-item-description-name {
+  font-family: "Poppins SemiBold", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
-@media (max-width: 700px) {
-  .gallery-item > img {
-    width: 100%;
-    height: auto;
+.gallery-item-description-materials {
+  margin-top: 12px;
+}
+.gallery-item-description-date, .gallery-item-description-size {
+  margin-top: 4px;
+}
+
+@media (max-width: 800px) {
+  .film {
+    margin: 0;
   }
 }
 

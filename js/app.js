@@ -41,7 +41,7 @@ const themes = {
         textColor: 'white'
     },
     gallery: {
-        backgroundColor: '#DFDFDF',
+        backgroundColor: '#bbbca7',
         textColor: 'black'
     },
     more: {
