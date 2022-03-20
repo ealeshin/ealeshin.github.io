@@ -452,6 +452,10 @@ template {
   }
 }
 
+.top-offset {
+  margin-top: 50px;
+}
+
 .titles-container {
   width: 100%;
   height: 70vh;
