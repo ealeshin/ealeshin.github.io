@@ -1,4 +1,4 @@
 #/bin/sh
 
-open -a Safari /Users/evgenyaleshin/projects/homepage/index.html
+open -a Safari /Users/evgenyaleshin/projects/github-pages/index.html
 sass --watch --no-source-map src/scss:css

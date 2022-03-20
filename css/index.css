@@ -388,72 +388,67 @@ template {
     transform: translateY(-100%);
   }
 }
-.playlist-container {
+.gallery-container {
   width: 100%;
   display: flex;
-  margin-bottom: 75px;
-  flex-direction: row;
+  margin: 25px 0 50px 0;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-items: flex-start;
-}
-@media (max-width: 700px) {
-  .playlist-container {
-    flex-direction: row;
-    align-items: center;
-  }
 }
 
-.playlist-item {
-  display: block;
-  width: 270px;
-  margin: 20px 0;
+.gallery-item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin: 32px 0;
 }
-.playlist-item .track-title {
-  line-height: 1;
-  padding: 6px 0;
+@media (max-width: 800px) {
+  .gallery-item {
+    flex-direction: column;
+  }
+}
+.gallery-item-picture {
+  width: 500px;
   font-size: 21px;
-  letter-spacing: -0.5px;
+}
+.gallery-item-picture img {
+  width: 100%;
+  height: auto;
 }
 @media (max-width: 700px) {
-  .playlist-item .track-title {
+  .gallery-item-picture {
+    width: 100%;
     font-size: 28px;
   }
 }
-.playlist-item .track-artist {
-  font-family: "Poppins SemiBold", sans-serif;
-  letter-spacing: -0.3px;
+.gallery-item-description {
+  width: 500px;
+  font-family: "Poppins Light", sans-serif;
+  font-size: 16px;
 }
 @media (max-width: 700px) {
-  .playlist-item .track-artist {
-    font-size: 21px;
+  .gallery-item-description {
+    width: 100%;
+    margin-top: 12px;
   }
 }
-.playlist-item .track-link {
-  display: inline-block;
+.gallery-item-description-name {
   font-family: "Poppins SemiBold", sans-serif;
-  margin-top: 8px;
-  padding: 2px 12px;
-  border: 1px solid black;
-  border-radius: 12px;
-  text-decoration: none;
+  font-size: 24px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 10px;
+  letter-spacing: 3px;
 }
-.playlist-item > img {
-  width: 250px;
-  height: 250px;
+.gallery-item-description-materials {
+  margin-top: 12px;
 }
-@media (max-width: 700px) {
-  .playlist-item > img {
-    width: 100%;
-    height: auto;
-  }
+.gallery-item-description-date, .gallery-item-description-size {
+  margin-top: 4px;
 }
-@media (max-width: 700px) {
-  .playlist-item {
-    width: 100%;
-    margin: 32px 0;
+
+@media (max-width: 800px) {
+  .film {
+    margin: 0;
   }
 }
 
@@ -489,6 +484,9 @@ template {
   display: block;
   text-align: center;
   margin-bottom: 32px;
+}
+.titles-feed .item-heading {
+  margin-bottom: 72px;
 }
 
 html, body {
